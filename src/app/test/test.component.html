@@ -1,15 +1,31 @@
-<p>
-  test works!
-</p>
-<div *ngFor="let hero of heroes; let i=index">
-  <div *ngIf="i < 20">
-  <img src={{hero.images.xs}} (click)="chooseHero(i)">
-  {{hero.name}}
-  Intel: {{hero.powerstats.intelligence}}
-  Strength: {{hero.powerstats.strength}}
-  Speed: {{hero.powerstats.speed}}
-  Durability: {{hero.powerstats.durability}}
-  Power: {{hero.powerstats.power}}
-  Combat: {{hero.powerstats.combat}}
-</div>
-</div>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+
+
+<h1>Mortal Combat</h1>
+
+<body>
+  <hr/>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let hero of heroes; let i=index">
+        <div *ngIf="i < 20">
+          <div class="col-md-3 mx-auto">
+            <div class="card" style="width: 18rem;">
+              <img src={{hero.images.sm}} (click)="chooseHero(i)">
+              <div class="card-img-overlay">
+                <h4>{{hero.name}}</h4> Intel: {{hero.powerstats.intelligence}} Strength: {{hero.powerstats.strength}} Speed:
+                {{hero.powerstats.speed}} Durability: {{hero.powerstats.durability}} Power: {{hero.powerstats.power}} Combat:
+                {{hero.powerstats.combat}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>

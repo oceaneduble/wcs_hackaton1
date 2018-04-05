@@ -29,7 +29,7 @@ export class TestComponent implements OnInit {
   chooseHero(index) {
     this.heroData.fighter[this.playerNumber] = this.heroes[index];
     this.playerNumber++;
-    if(this.fighter.length == 2) {
+    if (this.fighter.length === 2) {
       this.router.navigate(['/fight']);
     }
     }
