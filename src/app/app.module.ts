@@ -8,23 +8,29 @@ import { RouterModule, Routes } from '@angular/router'; // Routing import
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { FightComponent } from './fight/fight.component';
+import { HeroDataService } from './shared/hero-data.service';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: TestComponent },
   { path: 'test', component: TestComponent },
+  { path: 'fight', component: FightComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    FightComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    
   ],
-  providers: [ApiService],
+  providers: [ApiService,
+  HeroDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
