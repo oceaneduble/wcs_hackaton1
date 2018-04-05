@@ -1,0 +1,15 @@
+<p>
+  test works!
+</p>
+<div *ngFor="let hero of heroes; let i=index">
+  <div *ngIf="i < 20">
+  <img src={{hero.images.xs}} (click)="chooseHero()">
+  {{hero.name}}
+  Intel: {{hero.powerstats.intelligence}}
+  Strength: {{hero.powerstats.strength}}
+  Speed: {{hero.powerstats.speed}}
+  Durability: {{hero.powerstats.durability}}
+  Power: {{hero.powerstats.power}}
+  Combat: {{hero.powerstats.combat}}
+</div>
+</div>
