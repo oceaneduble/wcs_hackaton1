@@ -5,6 +5,7 @@
 
 
 <h1>Mortal Combat</h1>
+<h2>Pick two superheroes by clicking on them and get ready to fight !</h2>
 
 <body>
   <hr/>
@@ -12,7 +13,7 @@
    <div class="container">
     <div class="row">
       <div *ngFor="let hero of heroes; let i=index">
-        <div *ngIf="i < 20">
+        <div *ngIf="i < 21">
           <div class="col-md-3 mx-auto">
             <div class="card" style="width: 18rem;">
               <img src={{hero.images.sm}} (click)="chooseHero(i)"> 
