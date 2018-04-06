@@ -15,15 +15,16 @@
         <div *ngIf="i < 20">
           <div class="col-md-3 mx-auto">
             <div class="card" style="width: 18rem;">
-              <img src={{hero.images.sm}} (click)="chooseHero(i)">
-              <div class="card-img-overlay">
+              <img src={{hero.images.sm}} (click)="chooseHero(i)"> 
+              <div class="text">
                 <h4>{{hero.name}}</h4> Intel: {{hero.powerstats.intelligence}} Strength: {{hero.powerstats.strength}} Speed:
                 {{hero.powerstats.speed}} Durability: {{hero.powerstats.durability}} Power: {{hero.powerstats.power}} Combat:
                 {{hero.powerstats.combat}}
               </div>
+              </div>
             </div>
           </div>
-        </div>
+        
       </div>
     </div>
   </div>
