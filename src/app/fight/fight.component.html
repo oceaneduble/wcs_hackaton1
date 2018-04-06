@@ -1,9 +1,53 @@
-<button (click)="headkick1()">Headkick</button>
-<button (click)="punch1()">Punch</button>
-<button (click)="frontkick1()">Front-kick</button>
-<button (click)="uppercut1()">Uppercut</button>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
 
-<button (click)="headkick2()">Headkick</button>
-<button (click)="punch2()">Punch</button>
-<button (click)="frontkick2()">Front-kick</button>
-<button (click)="uppercut2()">Uppercut</button>
+
+<div class="card">
+  <img class="card-img" src="https://i.pinimg.com/originals/ae/b2/14/aeb2149471de2abc2be9d58b1c62b38f.gif" alt="Card image">
+  <div class="card-img-overlay">
+    <div class="row">
+      <div class="col-md-5">
+          <p class="number">{{pvPlayer1}} / 200 PV</p>
+        </div>
+
+      <div class="col-md-5">
+        <p class="number1">{{pvPlayer2}} / 200 PV</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <img src="{{player1.images.sm}}" class="imgplayer">
+      </div>
+      <div class="col-md-5">
+        <img src="{{player2.images.sm}}" class="imgplayer img2">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <p>Player 1</p>
+  </div>
+  <div class="col-md-5">
+    <p>Player 2</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto bu">
+      <button (click)="headkick1()">Headkick</button>
+      <button (click)="punch1()">Punch</button>
+      <button (click)="frontkick1()">Front-kick</button>
+      <button (click)="uppercut1()">Uppercut</button>
+    </div>
+    <div class="col-md-6 mx-auto bu">
+      <button (click)="headkick2()">Headkick</button>
+      <button (click)="punch2()">Punch</button>
+      <button (click)="frontkick2()">Front-kick</button>
+      <button (click)="uppercut2()">Uppercut</button>
+    </div>
+  </div>
