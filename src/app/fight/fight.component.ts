@@ -30,9 +30,8 @@ export class FightComponent implements OnInit {
 
   headkick1(){
     this.pvPlayer2 = this.pvPlayer2 - this.player1.powerstats.intelligence;
-    console.log(this.pvPlayer2);
     this.hitsP1 = this.hitsP1 + 1;
-    this.lifeLostP2 = this.lifeLostP2 + this.player1.powerstats.power;
+    this.lifeLostP2 = this.lifeLostP2 + this.player1.powerstats.intelligence;
     this.switch = true;
     if (this.pvPlayer2 <= 0) {
       alert("Hits taken by P2: " + this.hitsP1 + "\nHealth lost by P2: " + this.lifeLostP2 ); 
@@ -61,7 +60,7 @@ export class FightComponent implements OnInit {
     this.pvPlayer2 = this.pvPlayer2 - this.player1.powerstats.combat;
     console.log(this.pvPlayer2);
     this.hitsP1 = this.hitsP1 + 1;
-    this.lifeLostP2 = this.lifeLostP2 + this.player1.powerstats.power;
+    this.lifeLostP2 = this.lifeLostP2 + this.player1.powerstats.combat;
     this.switch = true;
     if (this.pvPlayer2 <= 0) {
       alert("Hits taken by P2: " + this.hitsP1 + "\nHealth lost by P2: " + this.lifeLostP2 );
@@ -75,7 +74,7 @@ export class FightComponent implements OnInit {
     this.pvPlayer2 = this.pvPlayer2 - this.player1.powerstats.speed;
     console.log(this.pvPlayer2);
     this.hitsP1 = this.hitsP1 + 1;
-    this.lifeLostP2 = this.lifeLostP2 + this.player2.powerstats.power;
+    this.lifeLostP2 = this.lifeLostP2 + this.player2.powerstats.speed;
     this.switch = true;
     if (this.pvPlayer2 <= 0) {
       alert("Hits taken by P2: " + this.hitsP1 + "\nHealth lost by P2: " + this.lifeLostP2 );
@@ -89,7 +88,7 @@ export class FightComponent implements OnInit {
     this.pvPlayer1 = this.pvPlayer1 - this.player2.powerstats.intelligence;
     console.log(this.pvPlayer1);
     this.hitsP2 = this.hitsP2 + 1;
-    this.lifeLostP1 = this.lifeLostP1 + this.player2.powerstats.power;
+    this.lifeLostP1 = this.lifeLostP1 + this.player2.powerstats.intelligence;
     this.switch = false;
     if (this.pvPlayer1 <= 0) {
       alert("Hits taken by P1: " + this.hitsP2 + "\nHealth lost by P1: " + this.lifeLostP1 );
@@ -117,7 +116,7 @@ export class FightComponent implements OnInit {
     this.pvPlayer1 = this.pvPlayer1 - this.player2.powerstats.combat;
     console.log(this.pvPlayer1);
     this.hitsP2 = this.hitsP2 + 1;
-    this.lifeLostP1 = this.lifeLostP1 + this.lifeLostP1;
+    this.lifeLostP1 = this.lifeLostP1 + this.player2.powerstats.power;
     this.switch = false;
     if (this.pvPlayer1 <= 0) {
       alert("Hits taken by P1: " + this.hitsP2 + "\nHealth lost by P1: " + this.lifeLostP1 );
@@ -130,8 +129,8 @@ export class FightComponent implements OnInit {
   uppercut2(){
     this.pvPlayer1 = this.pvPlayer1 - this.player2.powerstats.speed;
     console.log(this.pvPlayer1);
-    this.hitsP2 = this.hitsP2 + this.hitsP2;
-    this.lifeLostP1 = this.lifeLostP1 + this.lifeLostP1;
+    this.hitsP2 = this.hitsP2 + 1;
+    this.lifeLostP1 = this.lifeLostP1 + this.player2.powerstats.speed;
     this.switch = false;
     if (this.pvPlayer1 <= 0) {
       alert("Hits taken by P1: " + this.hitsP2 + "\nHealth lost by P1: " + this.lifeLostP1 );

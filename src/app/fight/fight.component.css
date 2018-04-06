@@ -6,6 +6,8 @@
     position : relative;
 }*/
 
+@import url('https://fonts.googleapis.com/css?family=Chicle');
+
 p {
     text-align: center;
     margin-left: 30%;
@@ -20,8 +22,16 @@ p {
 button {
     border-radius: 12px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: white;
-    margin-left: 5px;
+    background-color: rgb(222, 0, 0);
+    color: white;
+    padding: 1em;
+}
+
+.versus {
+    max-width: 120px;
+    max-height: 120px;
+    margin-top: 120px;
+    margin-left: 60px;
 }
 
 .progress {
@@ -29,24 +39,30 @@ button {
     margin-left: 30%
 }
 
-.imgplayer {
+.imgplayer1 {
     margin-top: 40px;
     margin-left: 45%;
     width: 40%;
     border-radius: 10px;
+}
 
+.imgplayer2 {
+    margin-top: 40px;
+    margin-left: 20%;
+    width: 40%;
+    border-radius: 10px;
 }
 
 .number1 {
     color: white;
-    font-size: 40px;
-    
-    
+    font-size: 50px;
+    font-family: 'Chicle';    
 }
 
 .number {
     color: white;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Chicle';
 }
 
 
