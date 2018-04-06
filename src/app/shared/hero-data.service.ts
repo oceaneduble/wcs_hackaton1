@@ -4,7 +4,10 @@ import { Injectable } from '@angular/core';
 export class HeroDataService {
 
   public fighter = [];
+  playerNumber = 0;
 
   constructor() { }
+
+  
 
 }

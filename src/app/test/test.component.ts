@@ -21,7 +21,6 @@ export class TestComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getHeroes().subscribe(heroes => {
-      // console.log(heroes);
       this.heroes = heroes;
     });
   }
@@ -29,7 +28,7 @@ export class TestComponent implements OnInit {
   chooseHero(index) {
     this.heroData.fighter[this.playerNumber] = this.heroes[index];
     this.playerNumber++;
-    if (this.fighter.length === 2) {
+    if (this.heroData.fighter.length === 2) {
       this.router.navigate(['/fight']);
     }
     }

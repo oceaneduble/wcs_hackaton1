@@ -16,5 +16,9 @@ return this.http.get(this.api_url + 'all.json');
 getId(id) {
   return this.http.get(this.api_url + 'id/' + id + '.json');
 }
+/*
+getIntel(intel) {
+  return this.http.get(this.api_url + 'powerstats' + intel + '.json');
+}*/
 
 }
