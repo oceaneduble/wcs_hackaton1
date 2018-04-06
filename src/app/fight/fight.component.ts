@@ -11,7 +11,7 @@ import { ApiService } from '../shared/api.service';
 })
 export class FightComponent implements OnInit {
 
-  constructor(public heroData: HeroDataService, private apiService: ApiService, private router: Router,) { }
+  constructor(public heroData: HeroDataService, private apiService: ApiService, private router: Router) { }
 
   pvPlayer1 = 200;
   pvPlayer2 = 200;
