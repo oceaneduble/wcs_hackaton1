@@ -24,6 +24,9 @@ img {
     font-weight: bold;     
 }
 
+.card:hover>.card-img-overlay{
+   opacity: 0;
+}
 .card {
     border: none;
 }
