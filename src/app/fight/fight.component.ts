@@ -130,4 +130,5 @@ export class FightComponent implements OnInit {
       this.router.navigate(['/test']);
     }
   }
+
 }
