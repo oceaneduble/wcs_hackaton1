@@ -11,7 +11,7 @@ import { ApiService } from '../shared/api.service';
 })
 export class FightComponent implements OnInit {
 
-  constructor(public heroData: HeroDataService, private apiService: ApiService) { }
+  constructor(public heroData: HeroDataService, private apiService: ApiService, private router: Router,) { }
 
   pvPlayer1 = 200;
   pvPlayer2 = 200;
@@ -20,15 +20,15 @@ export class FightComponent implements OnInit {
 
 
   ngOnInit() {
-  /*  console.log(this.heroData.fighter);
-    console.log(player1, player2); */
+
   }
 
   headkick1(){
     this.pvPlayer2 = this.pvPlayer2 - this.player1.powerstats.intelligence;
     console.log(this.pvPlayer2);
     if (this.pvPlayer2 <= 0) {
-      console.log("Player 1 wins");
+      alert("Player 1 wins. You will soon be redirected to the character selection page.")
+      this.router.navigate(['/test']);
     }
   }
 
@@ -36,7 +36,8 @@ export class FightComponent implements OnInit {
     this.pvPlayer2 = this.pvPlayer2 - this.player1.powerstats.power;
     console.log(this.pvPlayer2);
     if (this.pvPlayer2 <= 0) {
-      console.log("Player 1 wins");
+      alert("Player 1 wins. You will soon be redirected to the character selection page.")
+      this.router.navigate(['/test']);
     }
   }
 
@@ -44,7 +45,8 @@ export class FightComponent implements OnInit {
     this.pvPlayer2 = this.pvPlayer2 - this.player1.powerstats.combat;
     console.log(this.pvPlayer2);
     if (this.pvPlayer2 <= 0) {
-      console.log("Player 1 wins");
+      alert("Player 1 wins. You will soon be redirected to the character selection page.")
+      this.router.navigate(['/test']);
     }
   }
 
@@ -52,7 +54,8 @@ export class FightComponent implements OnInit {
     this.pvPlayer2 = this.pvPlayer2 - this.player1.powerstats.speed;
     console.log(this.pvPlayer2);
     if (this.pvPlayer2 <= 0) {
-      console.log("Player 1 wins");
+      alert("Player 1 wins. You will soon be redirected to the character selection page.")
+      this.router.navigate(['/test']);
     }
   }
 
@@ -60,7 +63,8 @@ export class FightComponent implements OnInit {
     this.pvPlayer1 = this.pvPlayer1 - this.player2.powerstats.intelligence;
     console.log(this.pvPlayer1);
     if (this.pvPlayer1 <= 0) {
-      console.log("Player 2 wins");
+      alert("Player 2 wins. You will soon be redirected to the character selection page.")
+      this.router.navigate(['/test']);
     }
   }
 
@@ -68,7 +72,8 @@ export class FightComponent implements OnInit {
     this.pvPlayer1 = this.pvPlayer1 - this.player2.powerstats.power;
     console.log(this.pvPlayer1);
     if (this.pvPlayer1 <= 0) {
-      console.log("Player 2 wins");
+      alert("Player 2 wins. You will soon be redirected to the character selection page.")
+      this.router.navigate(['/test']);
     }
   }
 
@@ -76,7 +81,8 @@ export class FightComponent implements OnInit {
     this.pvPlayer1 = this.pvPlayer1 - this.player2.powerstats.combat;
     console.log(this.pvPlayer1);
     if (this.pvPlayer1 <= 0) {
-      console.log("Player 2 wins");
+      alert("Player 2 wins. You will soon be redirected to the character selection page.")
+      this.router.navigate(['/test']);
     }
   }
 
@@ -84,7 +90,8 @@ export class FightComponent implements OnInit {
     this.pvPlayer1 = this.pvPlayer1 - this.player2.powerstats.speed;
     console.log(this.pvPlayer1);
     if (this.pvPlayer1 <= 0) {
-      console.log("Player 2 wins");
+      alert("Player 2 wins. You will soon be redirected to the character selection page.")
+      this.router.navigate(['/test']);
     }
   }
 }

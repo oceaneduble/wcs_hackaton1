@@ -1,6 +1,3 @@
-<p>
-  test works!
-</p>
 <div *ngFor="let hero of heroes; let i=index">
   <div *ngIf="i < 20">
   <img src={{hero.images.xs}} (click)="chooseHero(i)">
